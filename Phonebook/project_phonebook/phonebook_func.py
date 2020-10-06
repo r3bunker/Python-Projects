@@ -12,6 +12,7 @@
 
 import os
 from tkinter import *
+from tkinter import messagebox
 import tkinter as tk
 import sqlite3
 
@@ -22,7 +23,7 @@ import phonebook_main
 import phonebook_gui
 
 
-def center_window(self, w, h):  # pass in the tkinter frame (master) reference and the w and h
+def CenterWindow(self, w, h):  # pass in the tkinter frame (master) reference and the w and h
     # get user's screen width and height
     screen_width = self.master.winfo_screenwidth()
     screen_height = self.master.winfo_screenheight()

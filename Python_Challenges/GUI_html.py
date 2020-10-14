@@ -53,9 +53,6 @@ def load_gui(self):
     self.lbl_body.grid(row=1, column=0, padx=(25, 0),
                        pady=(60, 0), sticky=W)
     # Buttons
-    self.btn_commit = tk.Button(
-        self.master, width=15, height=3, text='Commit', command=lambda: retrieve_input(self))
-    self.btn_commit.grid(row=2, column=2, padx=(25, 0), pady=(10, 10))
     self.btn_newWebPage = tk.Button(
         self.master, width=15, height=3, text='Make New Webpage', command=lambda: makeHTML(self))
     self.btn_newWebPage.grid(row=3, column=0, padx=(25, 0), pady=(10, 10))
@@ -77,7 +74,7 @@ def makeHTML(self):
     <html>
         <body>
             <h1>"""
-            + str(retrieve_input(self)) +
+            + self.txt_browse1.get() +
             """</h1>
         </body>
     </html>
@@ -87,12 +84,6 @@ def makeHTML(self):
     f.close()
     url = "webpageGenerator.html"
     wb.open(url)
-
-
-def retrieve_input(self):  # retrieves the text box input
-    txtInput = self.txt_browse1.get()
-    print(txtInput)  # "1.0", 'end-1c'
-    return txtInput
 
 
 if __name__ == "__main__":

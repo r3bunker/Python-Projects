@@ -76,27 +76,23 @@ def makeHTML(self):
     html = ("""
     <html>
         <body>
-            <h1>
-                Summersale
-            </h1>
+            <h1>"""
+            + str(retrieve_input(self)) +
+            """</h1>
         </body>
     </html>
     """)
 
-    # soup = BeautifulSoup(html, 'html.parser')
-    # h1_tag = soup.h1
-
-    # new_tag = soup.new_h1()
-    # new_tag.string = retrieve_input(self)
-    # h1_tag.i.replace_with(new_tag)
     f.write(html)
     f.close()
     url = "webpageGenerator.html"
     wb.open(url)
 
 
-def retrieve_input(self):
-    input = self.txt_browse1.get()  # "1.0", 'end-1c'
+def retrieve_input(self):  # retrieves the text box input
+    txtInput = self.txt_browse1.get()
+    print(txtInput)  # "1.0", 'end-1c'
+    return txtInput
 
 
 if __name__ == "__main__":

@@ -75,12 +75,14 @@ def load_gui(self):
 def getSourcePath(self):
     sourcePath = StringVar()
     folder_selected = filedialog.askdirectory()
+    # grabs the text from the folder selected
     self.txt_source.insert(0, folder_selected)
 
 
 def getDestinationPath(self):
     destinationPath = StringVar()
     folder_selected = filedialog.askdirectory()
+    # grabs the text from the folder selected
     self.txt_destination.insert(0, folder_selected)
 
 

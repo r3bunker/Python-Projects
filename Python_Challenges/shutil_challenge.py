@@ -91,7 +91,7 @@ def fileCheck(self):
     destination = self.txt_destination.get()
     for file in os.listdir(source):
         filetime = dt.datetime.fromtimestamp(
-            os.path.getctime(os.path.join(source, file)))
+            os.path.getmtime(os.path.join(source, file)))
         print(filetime)
         if filetime.date() == today:
             print(file + ' Needs to be moved')

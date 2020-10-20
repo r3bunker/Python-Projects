@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Hello World{% endblock %}
+
+{% block header %}Users Details:{% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+    <form action="../details/" name="profileForm" method="POST">
+        <table>
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_table }}
+        </table>
+        <div class="frmBtn_container">
+            <input type="submit">
+            <div class="button_container">
+                <a href="../{{ form.pk }}delete/"><button type="button">DELETE</button></a>
+                <a href="{% url 'profiles_console' %}"><button type="button">CANCEL</button></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock %}

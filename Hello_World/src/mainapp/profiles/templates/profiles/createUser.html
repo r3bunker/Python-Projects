@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Hello World{% endblock %}
+
+{% block header %}Create A New User{% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+    <form action="{% url 'createUser' %}" method="POST">
+        <div class="frmObject_container">
+            {% csrf_token %}
+            {{ form.non_field_errors}}
+            {{ form.as_p }}
+        </div>
+        <div class="frmBtn_container">
+            <input type="submit" value="Create New User" class="btn" name="Save_User">
+            <a href="{% url 'profiles_console' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

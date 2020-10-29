@@ -8,7 +8,7 @@ Projects:
   - Checkbook
   - Student Tracking
  
-<bold>Phonebook</bold>
+<strong>Phonebook</strong>
   This project functions a phonebook for a user. It saves a contact's name, number and email in a database using sqlite3.
   
 <bold>Check Files GUI</bold>
